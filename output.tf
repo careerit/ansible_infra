@@ -7,7 +7,6 @@ output "web_ip" {
 }
 
 
-
 output "db_ip" {
    value = [azurerm_network_interface.db.*.private_ip_address]
 }

@@ -1,11 +1,11 @@
 #Fetch the Cloudinit (userdate) file
 
 data "template_file" "ansible" {
-  template = file("${path.module}/Templates/cloudnint-ansible.tpl")
+  template = file("./Templates/cloudint-ansible.tpl")
 }
 
 data "template_file" "key_data" {
-  template = file("/opt/class/keys/id_ansible.pub")
+  template = file("/opt/lab/keys/id_ansible.pub")
 }
 
 resource "azurerm_virtual_machine" "ansible" {
